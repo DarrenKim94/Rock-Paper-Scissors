@@ -1,15 +1,7 @@
-let playerScore = 0;
-let computerScore = 0;
-
-function computerChoice() {
-    let randomChoice = Math.floor(Math.random() * 3);
-    if (randomChoice === 0){
-        computerChoice = 'rock'
-    }
-    if (randomChoice === 1){
-        computerChoice = 'paper'
-    }
-    if (randomChoice === 0){
-        computerChoice = 'scissors'
-    }
-}
+    let playerScore = 0;
+    let computerScore = 0;
+    const rockChoice = document.getElementById('rock'); 
+    const paperChoice = document.getElementById('paper'); 
+    const scissorChoice = document.getElementById('scissor'); 
+    const playerChoices = [rockChoice, paperChoice, scissorChoice];
+    const computerChoice = ['rock', 'paper', 'scissor']
