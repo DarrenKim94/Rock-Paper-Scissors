@@ -1,15 +1,18 @@
-let playerScore = 0;
-let computerScore = 0;
+const playerScore = document.getElementById('playerScore');
+const computerScore = document.getElementById('computerScore');
+const winnerText = document.getElementById('winnerText'); 
+const playerChoices = document.getElementsByTagName('button');
 
-const rockChoice = document.getElementById('rock'); 
-const paperChoice = document.getElementById('paper'); 
-const scissorChoice = document.getElementById('scissor'); 
-const playerChoices = [rockChoice, paperChoice, scissorChoice];
-let computerChoice = (Math.floor(Math.random() * 3 + 1));
-const computerChoices = ['rock', 'paper', 'scissor']
-
+playerChoices.forEach(choice => {
+    choice.onclick = function() {userPick()};
+    function userPick(){
+        player = choice.textContent;
+    }
+});
 
 function playGame() {
+    let computerChoice = (Math.floor(Math.random() * 3 + 1));
+
     if(computerChoice === 1) {
         computerChoice = 'rock'
     };
