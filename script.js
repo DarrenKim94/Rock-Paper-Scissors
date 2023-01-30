@@ -7,7 +7,7 @@ let computerChoice = '';
 const playerScoreText = document.getElementById('playerScoreText');
 const computerScoreText = document.getElementById('computerScoreText');
 let playerScore = 0;
-let computerScore =0;
+let computerScore = 0;
 
 
 playerChoices.forEach(choice => {
@@ -62,4 +62,13 @@ function checkWinner() {
         winnerText.innerHTML = 'YOU LOSE';
         computerScoreText.innerHTML = `Computer Score: ${computerScore += 1}`
     }
+}
+
+function resetGame() {
+    computerScoreText.innerHTML = 'Computer Score:'
+    playerScoreText.innerHTML = 'Player Score:'
+    playerChoiceText.innerHTML = '';
+    computerChoiceText.innerHTML = '';
+    playerScore = 0;
+    computerScore = 0;
 }
