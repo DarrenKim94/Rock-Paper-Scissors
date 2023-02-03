@@ -9,16 +9,16 @@ const computerScoreText = document.getElementById('computerScoreText');
 let playerScore = 0;
 let computerScore = 0;
 
-
 playerChoices.forEach(choice => {
-    choice.onclick = function() {userChoice()};
-    function userChoice() {
-        playerChoice = choice.innerHTML;
-        playerChoiceText.innerHTML = playerChoice;
-        computerOptions();
-        checkWinner();
-    }
+    choice.onclick = function() {userChoice(choice)};
 });
+
+function userChoice(choice) {
+    playerChoice = choice.innerHTML;
+    playerChoiceText.innerHTML = playerChoice;
+    computerOptions();
+    checkWinner();
+}
 
 function computerOptions() {
     const ranNum = (Math.floor(Math.random() * 3 + 1));
